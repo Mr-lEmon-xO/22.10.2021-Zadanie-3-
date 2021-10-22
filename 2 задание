@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int bin(int t, int s, int y)
+{
+	int u;
+	u = t;
+	u = u % 10;
+	u = u * pow(2, y);
+	y++;
+	s = s + u;
+	if (t > 1)
+	{
+
+		t = t / 10;
+		return bin(t,s,y);
+	}
+	else
+	{
+		cout << s;
+	}
+}
+int main() 
+{
+	int k, n;
+	cin >> n;
+	bin(n,0,0);
+}
