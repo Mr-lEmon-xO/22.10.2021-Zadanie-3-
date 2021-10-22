@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int PP(int u, int y)
+{
+	{
+		if (u == 1)
+			return(0);
+		if (u % y == 0)
+			{
+				cout << y << endl;
+				PP(u / y, y);
+				return(u,y);
+			}
+		else
+		{
+			y = y + 1;
+			PP(u, y);
+		}
+	}
+}
+	int main() { 
+		int n;
+		cin >> n;
+		PP(n,2);
+		return 0;
+	}
