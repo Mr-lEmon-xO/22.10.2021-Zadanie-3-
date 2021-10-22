@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int vivod(int n, int k) {
+	int g,y,h=1,t;
+	y = n;
+	g = n;
+	t = n;
+	while (t > 9) {
+		t = t / 10;
+		h = h * 10;
+	}
+	if (y > 9) {
+		g = y / h;
+		y = n % h;
+		h = h / 10;
+		cout << g << endl;
+	}
+	else
+	{
+		cout << g << endl;
+		return(0);
+	}
+	return vivod(y,k);
+}
